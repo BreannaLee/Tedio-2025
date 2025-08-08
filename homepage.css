@@ -1,0 +1,39 @@
+body {
+    background: url('father-child-bg.png') no-repeat center center fixed;
+    font-family: 'Lexend', Arial, sans-serif;
+    color: #FFFFFF;
+    margin: 0;
+    min-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+button {
+    background-color: #90AA90;
+    color: #FFFFFF; 
+    font-size: 1.2rem;
+    padding: 0.75em 2em;
+    border-radius: 24px;
+    border: none;
+    cursor: pointer;
+}
+p {
+    margin: 0;
+}
+.text {
+    font-size: 16px;
+    margin: 0.5em 0;
+    max-width: 896px;
+    text-align: center;
+    align-self: center;
+}
+.heading {
+    font-size: 48px;
+    font-weight: bolder;
+}

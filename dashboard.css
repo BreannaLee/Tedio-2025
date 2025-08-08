@@ -1,0 +1,51 @@
+.tiles-container {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    margin-top: 48px;
+}
+.tile {
+    background: #fff;
+    border: 2px solid #A0A0A0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    width: 200px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: box-shadow 0.2s, border-color 0.2s;
+    text-align: center;
+}
+.tile:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    border-color: #333;
+}
+.tile-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-family: 'Lexend', sans-serif;
+}
+.tile-desc {
+    font-size: 15px;
+    color: #888;
+    font-family: 'Lexend', sans-serif;
+}
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header nav ul {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+header nav img {
+    height: 48px;
+}

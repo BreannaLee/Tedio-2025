@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload JSON File</title>
+    <link rel="stylesheet" href="upload.css">
+</head>
+<body>
+    <p class="heading">Upload your takeout file</p>
+    <p class="text">Please upload the takeout file.</p>
+    <div class="video-container">
+        <video controls>
+            <source src="upload.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="upload-box" id="dropArea">
+        <div class="upload-text">Drag and drop your file here</div>
+        <div style="margin: 12px 0; font-size: 16px; color: #888;">or</div>
+        <input type="file" id="jsonFile" accept=".json" style="display:none;">
+        <button class="upload-btn" id="uploadBtn">Choose File</button>
+    </div>
+    <div id="loadingBox" style="display:none; text-align:center;">
+        <div class="loader"></div>
+        <div class="loading-text">Processing your file...</div>
+    </div>
+    <div id="uploadMessage"></div>
+    <button id="continueBtn" class="continue-btn">Continue</button>
+    <script src="upload.js"></script>
+    <script>
+        // Example: in upload.js, after backend signals ready
+        window.location.href = "dashboard.html";
+    </script>
+</body>
+</html>

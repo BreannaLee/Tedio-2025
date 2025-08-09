@@ -92,19 +92,19 @@
       }
 
       /* Right column */
-      .teal-hero {
+      .outer {
         position: relative;
         background: var(--teal);
         color: var(--white);
         border-radius: 16px;
-        min-height: 180px;
+        min-height: 360px;
         overflow: hidden;
         box-shadow: var(--shadow);
       }
 
-      .teal-hero .overlay {
-        position: absolute;
-        inset: 0;
+      .outer .overlay {
+        /* Make overlay participate in normal flow so container height adapts to content */
+        position: static;
         padding: 20px 24px;
         display: flex;
         flex-direction: column;
@@ -113,49 +113,73 @@
         background: linear-gradient(0deg, rgba(13, 148, 136, 0.15), rgba(13, 148, 136, 0.15));
       }
 
-      .teal-hero h2 {
+      /* Floating white card now sits below text inside the teal hero */
+      .outer .inner {
+        position: static;
+        width: 600%;
+        max-width: calc(100% - 32px);
+        margin: 12px auto 10px;
+      }
+
+      .outer h2 {
         margin: 0;
         font-size: 20px;
         letter-spacing: 0.01em;
       }
 
-      .teal-hero p {
+      .outer p {
         margin: 0;
         opacity: 0.95;
       }
 
-      .section {
+      .bullets {
         margin-top: 18px;
       }
 
-      .section h3 {
+      .bullets h3 {
         margin: 0 0 8px 0;
         font-size: 18px;
       }
 
-      .section p {
+      .bullets p {
         margin: 0 0 12px 0;
         color: var(--muted);
       }
 
-      .section ol {
+      .bullets ol {
         margin: 8px 0 0 20px;
         padding: 0 0 0 4px;
       }
 
-      .section ol li {
+      .bullets ol li {
         margin: 6px 0;
       }
 
-      .rounded-23 {
+      /* Ensure list markers are visible inside the teal hero */
+      .outer .overlay ol {
+        list-style: decimal inside;
+        margin: 8px 0 0 0;
+        padding-left: 0;
+      }
+
+      .outer .overlay ul {
+        list-style: disc inside;
+        margin: 8px 0 0 0;
+        padding-left: 0;
+      }
+
+      /* actual white background of inner box*/
+
+      .inner {
         background: var(--white);
         border: 1px solid var(--border);
         border-radius: 23px;
         padding: 16px;
         box-shadow: var(--shadow);
+        color: var(--text)
       }
 
-      .rounded-23 img {
+      .inner img {
         width: 100%;
         height: 180px;
         object-fit: cover;

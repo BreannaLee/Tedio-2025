@@ -30,7 +30,7 @@
         margin: 0 auto;
         padding: 24px;
         display: grid;
-        grid-template-columns: 340px 1fr;
+        grid-template-columns: 200px 1fr;
         gap: 24px;
       }
 
@@ -78,14 +78,14 @@
 
       .resources-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         gap: 10px;
       }
 
       .resources-grid img {
         width: 100%;
-        height: 120px;
-        object-fit: cover;
+        height: auto;
+        object-fit: contain;
         border-radius: 8px;
         border: 1px solid var(--border);
         background: #eef2f7;
@@ -100,6 +100,7 @@
         min-height: 360px;
         overflow: hidden;
         box-shadow: var(--shadow);
+        color: var(--white);
       }
 
       .outer .overlay {
@@ -130,6 +131,7 @@
       .outer p {
         margin: 0;
         opacity: 0.95;
+        color: var(--white);
       }
 
       .bullets {

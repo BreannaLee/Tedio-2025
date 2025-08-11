@@ -1,9 +1,9 @@
     :root {
-        --bg: #f5f7fb;
+        --bg: #EDF2F0;
         --text: #0f172a;
         --muted: #475569;
         --border: #e2e8f0;
-        --teal: #0d9488;
+        --teal: #D6ECE5;
         --white: #ffffff;
         --shadow: 0 4px 12px rgba(2, 6, 23, 0.06), 0 2px 4px rgba(2, 6, 23, 0.04);
       }
@@ -30,7 +30,7 @@
         margin: 0 auto;
         padding: 24px;
         display: grid;
-        grid-template-columns: 200px 1fr;
+        grid-template-columns: 340px 1fr;
         gap: 24px;
       }
 
@@ -95,12 +95,11 @@
       .outer {
         position: relative;
         background: var(--teal);
-        color: var(--white);
+        color: var(--text);
         border-radius: 16px;
         min-height: 360px;
         overflow: hidden;
         box-shadow: var(--shadow);
-        color: var(--white);
       }
 
       .outer .overlay {
@@ -111,7 +110,6 @@
         flex-direction: column;
         justify-content: center;
         gap: 6px;
-        background: linear-gradient(0deg, rgba(13, 148, 136, 0.15), rgba(13, 148, 136, 0.15));
       }
 
       /* Floating white card now sits below text inside the teal hero */
@@ -131,7 +129,7 @@
       .outer p {
         margin: 0;
         opacity: 0.95;
-        color: var(--white);
+        color: var(--text);
       }
 
       .bullets {
@@ -155,6 +153,12 @@
 
       .bullets ol li {
         margin: 6px 0;
+      }
+
+      /* inner sub bullet points */
+      .outer .overlay ol ol {
+        list-style-type: lower-alpha;
+        padding-left:25px;
       }
 
       /* Ensure list markers are visible inside the teal hero */
